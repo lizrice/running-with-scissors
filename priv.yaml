@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:capsh
+    securityContext:
+      privileged: true
+    # Run the capsh command inside this container to see the additional privileges that this 
+    # security context grants

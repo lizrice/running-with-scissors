@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:user
+  securityContext:  
+    runAsNonRoot: true
+  # This pod succeeds because the image is built to run as a non-root user
+    

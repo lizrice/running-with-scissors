@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: naughty
+  labels:
+    app: naughty
+spec:
+  containers:
+  - name: naughty
+    image: lizrice/naughty:0.1
